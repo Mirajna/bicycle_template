@@ -48,6 +48,17 @@ table {
     flex-wrap: wrap;
 }
 
+.row.oliva {
+    .col {
+        &__text {
+            padding-bottom: 88px;
+        }
+        &__iconwrapper {
+            margin-top: 8px;
+        }
+    }
+}
+
 .col {
     flex-shrink: 0;
     flex-grow: 1;
@@ -106,9 +117,7 @@ table {
     }
 
     &__text {
-        padding: 66px;
-        padding-top: 56px;
-        padding-bottom: 96px;
+        padding: 56px 66px 96px;
         background: $white;
         text-align: center;
         position: relative;
@@ -117,7 +126,7 @@ table {
             content: '';
             position: absolute;
             left: calc(50% - 10px);
-            top: 100%;
+            top: 99.7%;
             width: 0;
             height: 0;
             border-style: solid;
@@ -143,7 +152,7 @@ table {
                 height: 1px;
                 position: absolute;
                 left: calc(50% - 25px);
-                bottom: -7px;
+                bottom: -22%;
                 background-color: rgba(53, 55, 56, 0.2);
             }
         }
@@ -153,17 +162,6 @@ table {
         height: 200px;
         position: relative;
         overflow: hidden;
-    }
-}
-
-.row.oliva {
-    .col{
-        &__text {
-            padding-bottom: 88px;
-        }
-        &__iconwrapper {
-            margin-top: 8px;
-        }
     }
 }
 
@@ -185,4 +183,69 @@ table {
 .col-33 {
     @extend .col;
     width: 33.3%;
+}
+
+@media (max-width:1420px) {
+    .container {
+        max-width: 1380px;
+    }
+
+    .col__text {
+        padding: 80px 20px;
+    }
+}
+
+@media (max-width:1180px) {
+
+    .row {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .col__presentation {
+        padding: 30px 25px;
+    }
+
+    .col__presentation p {
+        padding: 0;
+        text-align: justify;
+        width: 100%;
+    }
+
+    .col {
+        flex-direction: column;
+        width: 100%;
+        min-height: 200px;
+    }
+
+    .col__text {
+        padding: 60px 20px;
+    }
+
+    .col__text p:after {
+        bottom: -10%;
+    }
+
+    .boriosa {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .background-wrapp {
+        margin-top: 200px;
+        min-height: 270px;
+    }
+}
+
+@media (max-width:440px) {
+    .background-wrapp {
+        min-height: 200px;
+    }
+}
+
+@media (max-width:310px) {
+    .background-wrapp {
+        min-height: 100px;
+    }
 }

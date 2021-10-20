@@ -1,8 +1,11 @@
 window.$ = window.jQuery = require('jquery');
 // Mobile menu
 $(document).ready(function () {
-    $('.mobile-menu').on('click', function () {
-        $('.menu').slideToggle().css('right', '0px !important').css('left', 'auto');
+    $('.mobile-menu-left').on('click', function () {
+        $('.menu-left').slideToggle().css('right', '0px !important').css('left', 'auto');
+    }); 
+    $('.mobile-menu-right').on('click', function () {
+        $('.menu-right').slideToggle().css('right', '0px !important').css('left', 'auto');
     }); 
 })
 // Anchor links
