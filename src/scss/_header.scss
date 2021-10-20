@@ -78,6 +78,12 @@
                 width: calc(50% - 47px);
                 padding: 5px 35px;
             }
+            &__left {
+                text-align: right;
+            }
+            &__right {
+                text-align: left;
+            }
         }
     }
 }
