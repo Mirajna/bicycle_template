@@ -18,6 +18,7 @@ img {
 body {
     font: 400 16px/30px $base-font;
     color: $font-color;
+    cursor: default;
 }
 
 a {
@@ -165,6 +166,52 @@ table {
     }
 }
 
+.our_clients {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#clients .swiper {
+    margin-top: -24px;
+}
+
+.reviews .swiper-wrapper {
+    margin: 80px 0 100px;
+}
+
+.reviews .swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.text_reviews {
+    font: 400 18px/24px 'Roboto Slab', 'Times New Roman', Times, serif;
+    font-style: italic;
+	width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    letter-spacing: 0.1px;
+}
+
+.author_reviews {
+    margin-top: 34px;
+    font: 400 20px/24px 'Roboto Slab', 'Times New Roman', Times, serif;
+}
+
 .col-100 {
     @extend .col;
     width: 100%;
@@ -231,21 +278,10 @@ table {
         display: flex;
         flex-direction: column-reverse;
     }
-
-    .background-wrapp {
-        margin-top: 200px;
-        min-height: 270px;
-    }
 }
 
 @media (max-width:440px) {
     .background-wrapp {
-        min-height: 200px;
-    }
-}
-
-@media (max-width:310px) {
-    .background-wrapp {
-        min-height: 100px;
+        margin-top: 115%;
     }
 }

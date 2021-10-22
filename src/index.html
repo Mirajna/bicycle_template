@@ -5,38 +5,42 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Bicycle</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div class="wrapper">
         <section id="banner" class="banner">
             <header class="header">
                 <div class="container">
+                    <a href="#" class="navigation__logo-mobile">
+                        <img src="./images/logo_base.png" alt="Bicycle logo">
+                    </a>
+                    <span class="header__mobile-menu">
+                        <img src="./images/menu-list.png" alt="menu">
+                    </span>
                     <nav class="navigation">
-                        <span class="mobile-menu-left"></span>
-                        <div class="menu-left">
-                            <ul class="navigation__left">
-                                <li>
-                                    <a href="#about">About us</a>
-                                </li>
-                                <li>
-                                    <a href="#work">Work</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="navigation__left">
+                            <li>
+                                <a href="#about">About us</a>
+                            </li>
+                            <li>
+                                <a href="#work">Work</a>
+                            </li>
+                        </ul>
                         <a href="#" class="navigation__logo">
                             <img src="./images/logo_base.png" alt="Bicycle logo">
                         </a>
-                        <span class="mobile-menu-right"></span>
-                        <div class="menu-right">
-                            <ul class="navigation__right">
-                                <li>
-                                    <a href="#shop">Shop</a>
-                                </li>
-                                <li>
-                                    <a href="#contact">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="navigation__right">
+                            <li>
+                                <a href="#shop">Shop</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                        <span class="navigation__close"></span>
                     </nav>
                 </div>
             </header>
@@ -121,6 +125,44 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section id="twit">
+            <div class="container">
+                <div class="twitter_reviews">
+                    <a href="#" target="_blank">
+                        <img src="./images/sc-logo_twitter.png" alt="Twitter">
+                    </a>
+                </div>
+                <div class="swiper reviews">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="author_reviews">
+                                <a href="#">AOD New York  @aod </a> /  35 min
+                            </div>
+                            <div class="text_reviews">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
+                            </div>
+                        </div>          
+                        <div class="swiper-slide">
+                            <div class="author_reviews">
+                                <a href="#">Tesla @Tesla </a> /  40 min
+                            </div>
+                            <div class="text_reviews">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </div>
+                        </div>   
+                        <div class="swiper-slide">
+                            <div class="author_reviews">
+                                <a href="#">Elon Musk  @elonmusk </a> /  3 min
+                            </div>
+                            <div class="text_reviews">
+                                Hvaing placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum”
+                            </div>
+                        </div>                
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>    
         </section>
     </div>
 </body>
