@@ -47,15 +47,34 @@ table {
 .row {
     display: flex;
     flex-wrap: wrap;
-}
 
-.row.oliva {
-    .col {
-        &__text {
-            padding-bottom: 88px;
+    @include screen(1130) {
+        align-items: flex-start;
+    }
+
+    .oliva {
+        .col {
+            &__text {
+                padding-bottom: 88px;
+    
+                @include screen(1420) {
+                    padding-bottom: 44px;
+                }
+
+                @include screen(1130) {
+                    padding-bottom: 22px;
+                }
+            }
+            &__iconwrapper {
+                margin-top: 8px;
+            }
         }
-        &__iconwrapper {
-            margin-top: 8px;
+    }
+
+    .boriosa {
+        @include screen(1130) {
+            display: flex;
+            flex-direction: column-reverse;
         }
     }
 }
@@ -95,8 +114,16 @@ table {
         text-align: center;
         position: relative;
 
+        @include screen(1420) {
+            padding: 55px;
+        }
+
+        @include screen(1130) {
+            padding: 35px 45px;
+        }
+
         h4 {
-            padding: 15px 0 21px;
+            padding: 15px 0 19px;
             font-size: 18px;
             letter-spacing: 3.6px;
         }
@@ -108,6 +135,11 @@ table {
             width: 76%;
             font-size: 18px;
             line-height: 1.8;
+
+            @include screen(1130) {
+                padding: 0;
+                width: 100%;
+            }
         }
     }
 
@@ -123,6 +155,14 @@ table {
         text-align: center;
         position: relative;
 
+        @include screen(1420) {
+            padding: 40px 20px;
+        }
+
+        @include screen(1130) {
+            padding: 30px 45px;
+        }
+
         &:after {
             content: '';
             position: absolute;
@@ -134,6 +174,7 @@ table {
             border-width: 10px 10px 0 10px;
             border-color: $white transparent transparent transparent;
             z-index: 1;
+            
         }
 
         h4 {
@@ -147,6 +188,10 @@ table {
             text-align: justify;
             position: relative;
 
+            @include screen(1420) {
+                text-align: center;
+            }
+
             &:after {
                 content: '';
                 width: 50px;
@@ -155,6 +200,14 @@ table {
                 left: calc(50% - 25px);
                 bottom: -22%;
                 background-color: rgba(53, 55, 56, 0.2);
+
+                @include screen(1420) {
+                    bottom: -10%;
+                }
+
+                @include screen(340) {
+                    bottom: 0;
+                }
             }
         }
     }
@@ -165,53 +218,6 @@ table {
         overflow: hidden;
     }
 }
-
-.our_clients {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 90%;
-    margin: 0 auto;
-}
-
-#clients .swiper {
-    margin-top: -24px;
-}
-
-.reviews .swiper-wrapper {
-    margin: 80px 0 100px;
-}
-
-.reviews .swiper-slide {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-}
-
-.text_reviews {
-    font: 400 18px/24px 'Roboto Slab', 'Times New Roman', Times, serif;
-    font-style: italic;
-	width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
-    letter-spacing: 0.1px;
-}
-
-.author_reviews {
-    margin-top: 34px;
-    font: 400 20px/24px 'Roboto Slab', 'Times New Roman', Times, serif;
-}
-
 .col-100 {
     @extend .col;
     width: 100%;
@@ -230,58 +236,104 @@ table {
 .col-33 {
     @extend .col;
     width: 33.3%;
-}
 
-@media (max-width:1420px) {
-    .container {
-        max-width: 1380px;
-    }
-
-    .col__text {
-        padding: 80px 20px;
+    .background-wrapp {
+        @include screen(440) {
+            margin-top: 115%;
+        }
     }
 }
 
-@media (max-width:1180px) {
+.twitter {
+    .reviews {
+        &__logo-soc {
+            display: flex;
+            justify-content: center;
+            margin-top: 124px;
 
-    .row {
-        display: flex;
-        align-items: flex-start;
-        flex-wrap: wrap;
+            @include screen(1420) {
+                margin-top: 35px;
+            }
+        }
+
+        .swiper-wrapper {
+            margin: 20px 0 100px;
+            text-align: center;
+
+            @include screen(1420) {
+                margin-bottom: 35px;
+            }
+
+            @include screen(640) {
+                margin-bottom: 5px;
+            }
+            
+            .swiper-slide .twit {
+                &__author {
+                    font-size: 18px;
+                    letter-spacing: 2.3px;
+
+                    @include screen(640) {
+                        font-size: 14px;
+                    }
+
+                    a {
+                        font-weight: 600;
+                        padding-right: 6px;
+                    }
+                }
+                
+                &__text {
+                    font-style: italic;
+                    font-size: 24px;
+                    width: 70%;
+                    margin: 0 auto;
+                    line-height: 1.5;
+                    padding: 10px 0 0 35px;
+
+                    @include screen(1420) {
+                        padding-left: 0;
+                    }
+
+                    @include screen(640) {
+                        font-size: 16px;
+                        width: 90%;
+                        padding-bottom: 15px;
+                    }
+                }
+            }
+        }
+
+        .swiper-pagination {
+            bottom: 18px;
+
+            @include screen(1420) {
+                bottom: 12%;
+            }
+
+            @include screen(640) {
+                bottom: 0;
+            }
+            
+            .swiper-pagination-bullet {
+                background: transparent;
+                border: 2px solid $pagination-bullet;
+                width: 11px;
+                height: 11px;
+            }
+
+            .swiper-pagination-bullet.swiper-pagination-bullet-active {
+                background: $bullet-active;
+                border: none;
+            }
+        }
     }
+}
 
-    .col__presentation {
-        padding: 30px 25px;
-    }
-
-    .col__presentation p {
-        padding: 0;
-        text-align: justify;
-        width: 100%;
-    }
-
+@media (max-width:1130px) {
     .col {
         flex-direction: column;
         width: 100%;
         min-height: 200px;
-    }
-
-    .col__text {
-        padding: 60px 20px;
-    }
-
-    .col__text p:after {
-        bottom: -10%;
-    }
-
-    .boriosa {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-}
-
-@media (max-width:440px) {
-    .background-wrapp {
-        margin-top: 115%;
     }
 }

@@ -7,7 +7,6 @@
     <title>Bicycle</title>
     <link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -126,9 +125,9 @@
                 </div>
             </div>
         </section>
-        <section id="twit">
+        <section class="twitter">
             <div class="container">
-                <div class="twitter_reviews">
+                <div class="reviews__logo-soc">
                     <a href="#" target="_blank">
                         <img src="./images/sc-logo_twitter.png" alt="Twitter">
                     </a>
@@ -136,26 +135,29 @@
                 <div class="swiper reviews">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="author_reviews">
-                                <a href="#">AOD New York  @aod </a> /  35 min
+                            <div class="twit__author">
+                                <a href="#">AOD New York   @aod  </a>
+                                <span class="time-ago">/ 35 min </span>
                             </div>
-                            <div class="text_reviews">
+                            <div class="twit__text">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.
                             </div>
                         </div>          
                         <div class="swiper-slide">
-                            <div class="author_reviews">
-                                <a href="#">Tesla @Tesla </a> /  40 min
+                            <div class="twit__author">
+                                <a href="#">Tesla @Tesla </a>
+                                <span class="time-ago">/ 40 min</span>
                             </div>
-                            <div class="text_reviews">
+                            <div class="twit__text">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                             </div>
                         </div>   
                         <div class="swiper-slide">
-                            <div class="author_reviews">
-                                <a href="#">Elon Musk  @elonmusk </a> /  3 min
+                            <div class="twit__author">
+                                <a href="#">Elon Musk  @elonmusk </a>
+                                <span class="time-ago">/ 3 min </span>
                             </div>
-                            <div class="text_reviews">
+                            <div class="twit__text">
                                 Hvaing placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum”
                             </div>
                         </div>                
@@ -165,5 +167,6 @@
             </div>    
         </section>
     </div>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </body>
 </html>
