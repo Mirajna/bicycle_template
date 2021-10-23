@@ -84,6 +84,13 @@ table {
     flex-grow: 1;
     position: relative;
     overflow: hidden;
+    min-height: 265px;
+
+    @include screen(1130) {
+        flex-direction: column;
+        width: 100%;
+        min-height: 200px;
+    }
 
     &.centered {
         display: flex;
@@ -345,10 +352,10 @@ table {
     }
 }
 
-@media (max-width:1130px) {
-    .col {
-        flex-direction: column;
-        width: 100%;
-        min-height: 200px;
-    }
-}
+// @media (max-width:1130px) {
+//     .col {
+//         flex-direction: column;
+//         width: 100%;
+//         min-height: 200px;
+//     }
+// }

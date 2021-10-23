@@ -90,7 +90,7 @@ const config = {
             template: "./src/index.html"
         }),
         new ImageminPlugin({
-            test: /\.(jpe?g|png|gif|svg)$/i,
+            test: /\.(jpe?g|png|gif|svg|ico)$/i,
             pngquant: {
                 quality: '80'
             },
