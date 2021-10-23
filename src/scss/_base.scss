@@ -97,6 +97,7 @@ table {
         min-height: 102%;
         min-width: 102%;
         width: auto;
+        max-width: none;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -106,6 +107,20 @@ table {
     &__icon {
         position: relative;
         z-index: 10;
+
+        &--hidden {
+            @extend .col__icon;
+            opacity: 0;
+            transition: .3s;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+    }
+
+    &__link {
+        display: block;
     }
 
     &__presentation {
