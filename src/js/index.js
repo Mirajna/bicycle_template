@@ -36,4 +36,7 @@ const swiperReviews = new Swiper('.reviews', {
     scrollbar: {
         el: '.swiper-scrollbar',
     },
+    autoplay: {
+        delay: 5000,
+    },
 });
