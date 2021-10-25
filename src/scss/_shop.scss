@@ -64,22 +64,18 @@
             bottom: 18px;
 
             @include screen(1420) {
-                bottom: 12%;
-            }
-
-            @include screen(640) {
                 bottom: 0;
             }
             
             .swiper-pagination-bullet {
                 background: transparent;
-                border: 2px solid $pagination-bullet;
+                border: 2px solid $gray;
                 width: 11px;
                 height: 11px;
             }
 
             .swiper-pagination-bullet.swiper-pagination-bullet-active {
-                background: $bullet-active;
+                background: $gray;
                 border: none;
             }
         }
@@ -105,6 +101,11 @@
             text-transform: uppercase;
             letter-spacing: 2.3px;
 
+            @include screen(480) {
+                font-size: 12px;
+                text-align: center;
+            }
+
             &.centered {
                 flex-direction: column;
             }
@@ -114,7 +115,11 @@
 
 .discover-banner {
     background: $background-theme;
-    height: 200px;
+    padding: 75px 0;
+
+    @include screen(940) {
+        padding: 25px 0;
+    }
 
     .banner-button {
         display: flex;
@@ -136,6 +141,10 @@
         text-transform: uppercase;
         cursor: pointer;
         transition: .3s;
+
+        @include screen(480) {
+            width: 235px;
+        }
 
         &:hover {
             color: $white;

@@ -47,35 +47,25 @@ table {
 .row {
     display: flex;
     flex-wrap: wrap;
+}
 
+.oliva {
+    .col {
+
+        &__iconwrapper {
+            padding: 9px 0 40px;
+        }
+
+        p {
+            margin: -5px 0 -8px;
+        }
+    }
+}
+
+.boriosa {
     @include screen(1130) {
-        align-items: flex-start;
-    }
-
-    .oliva {
-        .col {
-            &__text {
-                padding-bottom: 88px;
-    
-                @include screen(1420) {
-                    padding-bottom: 44px;
-                }
-
-                @include screen(1130) {
-                    padding-bottom: 22px;
-                }
-            }
-            &__iconwrapper {
-                margin-top: 8px;
-            }
-        }
-    }
-
-    .boriosa {
-        @include screen(1130) {
-            display: flex;
-            flex-direction: column-reverse;
-        }
+        display: flex;
+        flex-direction: column-reverse;
     }
 }
 
@@ -113,12 +103,6 @@ table {
     overflow: hidden;
     min-height: 265px;
 
-    @include screen(1130) {
-        flex-direction: column;
-        width: 100%;
-        min-height: 200px;
-    }
-
     &__background {
         position: absolute;
         min-height: 102%;
@@ -154,7 +138,7 @@ table {
     }
 
     &__presentation {
-        padding: 117px 65px 139px;
+        padding: 117px 65px 136px;
         background: $white;
         text-align: center;
         position: relative;
@@ -164,11 +148,11 @@ table {
         }
 
         @include screen(1130) {
-            padding: 35px 45px;
+            padding: 35px 5px;
         }
 
         h4 {
-            padding: 15px 0 19px;
+            padding: 16px 0 19px;
             font-size: 18px;
             letter-spacing: 3.6px;
         }
@@ -179,7 +163,7 @@ table {
             padding-left: 35px;
             width: 76%;
             font-size: 18px;
-            line-height: 1.8;
+            line-height: 1.85;
 
             @include screen(1130) {
                 padding: 0;
@@ -195,7 +179,7 @@ table {
     }
 
     &__text {
-        padding: 56px 66px 96px;
+        padding: 62px 66px 94px;
         background: $white;
         text-align: center;
         position: relative;
@@ -205,7 +189,7 @@ table {
         }
 
         @include screen(1130) {
-            padding: 30px 45px;
+            padding: 30px 5px;
         }
 
         &:after {
@@ -223,7 +207,7 @@ table {
         }
 
         h4 {
-            padding: 13px;
+            padding: 12px;
             text-transform: uppercase;
             font-size: 18px;
             letter-spacing: 3.6px;
@@ -270,4 +254,14 @@ table {
             height: 100%;
         }
     }
+}
+
+.work {
+    .col {
+        @include screen(1130) {
+            flex-direction: column;
+            width: 100%;
+            min-height: 200px;
+        }
+    }    
 }

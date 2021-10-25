@@ -1,0 +1,154 @@
+
+.subscription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 470px;
+
+    @include screen(1130) {
+        margin: -70px 0;
+    }
+
+    @include screen(940) {
+        margin: -50px 0;
+    }
+
+    .logo {
+        width: 94px;
+    }
+
+    .stay {
+        font-size: 24px;
+        font-style: italic;
+        margin: 32px;
+    }
+
+    .mail_graph {
+        @include screen(580) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .email, .submit {
+            height: 70px;
+            vertical-align: middle;
+        }
+
+        .email {
+            width: 399px;
+            margin-right: 5px;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 18px;
+            padding-left: 25px;
+            color: $gray;
+            opacity: 0.5;
+
+            @include screen(580) {
+                width: 250px;
+                margin-bottom: 10px;
+            }
+
+            &::placeholder {
+                color: $gray;
+                opacity: 0.6;
+            }
+        }
+
+        .submit {
+            width: 125px;
+            font-size: 24px;
+            color: $white;
+            background: $font-color;
+            border: transparent;
+            border-radius: 2px;
+            cursor: pointer;
+
+            &:hover {
+                background: $img-hover;
+            }
+        }
+    }
+}
+
+.footer {
+    background: $footer-banner;
+    width: 100%;
+
+    .contact {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 250px;
+        margin: 0 134px;
+
+        @include screen(940) {
+            flex-direction: column;
+            justify-content: center;
+            padding: 25px 0;
+        }
+
+        &__address {
+            width: 290px;
+
+            @include screen(940) {
+                text-align: center;
+            }
+
+            p {
+                line-height: 0.9;
+                padding-bottom: 6px;
+
+                &:first-of-type {
+                    font-size: 16px;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                }
+
+                &:not(first-of-type) {
+                    font-size: 14px;
+                    font-style: italic;
+                    letter-spacing: 0.1px;
+                }
+            }
+        }
+
+        &__social {
+            display: flex;
+            justify-content: center;
+            width: 290px;
+
+            @include screen(940) {
+                margin: 15px 0;
+            }
+            
+            ul {
+                display: flex;
+
+                li {
+                    padding: 10px 7.8px 0;
+                }
+            }
+        }
+
+        &__credits {
+            display: flex;
+            justify-content: flex-end;
+            width: 290px;
+            font-size: 14px;
+            font-style: italic;
+            padding-top: 10px;
+
+            @include screen(940) {
+                justify-content: center;
+            }
+
+            img {
+                padding-left: 10px;
+            }
+        }
+    }
+}
