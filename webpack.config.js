@@ -17,6 +17,7 @@ const config = {
     devtool: "source-map",
     mode: "production",
     optimization: {
+        minimize: true,
         minimizer: [
             new TerserPlugin({
                 sourceMap: true,
@@ -69,6 +70,10 @@ const config = {
                     }
                 }
             },
+            {
+                test: /\.css$/,
+                use: ["style-loader", "css-loader", "postcss-loader"]
+              },
             {
                 test: /\.(svg|png|jpg|eot|gif)$/,
                 use: {

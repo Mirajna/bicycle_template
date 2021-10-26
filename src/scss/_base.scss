@@ -3,7 +3,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 ul {
@@ -45,8 +46,11 @@ table {
 }
 
 .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .oliva {
@@ -64,15 +68,26 @@ table {
 
 .boriosa {
     @include screen(1130) {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column-reverse;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
     }
 }
 
 .centered {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 20px;
 }
 
@@ -97,8 +112,11 @@ table {
 }
 
 .col {
-    flex-shrink: 0;
-    flex-grow: 1;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     position: relative;
     overflow: hidden;
     min-height: 265px;
@@ -111,7 +129,9 @@ table {
         max-width: none;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
 
     }
 
@@ -122,6 +142,8 @@ table {
         &--hidden {
             @extend .col__icon;
             opacity: 0;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
             transition: .3s;
             background-color: $img-hover;
             position: absolute;
@@ -259,7 +281,10 @@ table {
 .work {
     .col {
         @include screen(1130) {
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
             width: 100%;
             min-height: 200px;
         }

@@ -1,9 +1,17 @@
-
 .subscription {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 470px;
 
     @include screen(1130) {
@@ -26,10 +34,19 @@
 
     .mail_graph {
         @include screen(580) {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
         }
 
         .email, .submit {
@@ -50,6 +67,26 @@
             @include screen(580) {
                 width: 250px;
                 margin-bottom: 10px;
+            }
+
+            &::-webkit-input-placeholder {
+                color: $gray;
+                opacity: 0.6;
+            }
+
+            &::-moz-placeholder {
+                color: $gray;
+                opacity: 0.6;
+            }
+
+            &:-ms-input-placeholder {
+                color: $gray;
+                opacity: 0.6;
+            }
+
+            &::-ms-input-placeholder {
+                color: $gray;
+                opacity: 0.6;
             }
 
             &::placeholder {
@@ -79,46 +116,59 @@
     width: 100%;
 
     .contact {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         height: 250px;
         margin: 0 134px;
 
         @include screen(940) {
-            flex-direction: column;
-            justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             padding: 25px 0;
         }
 
         &__address {
             width: 290px;
+            font-style: italic;
+            line-height: 0.9;
 
             @include screen(940) {
                 text-align: center;
             }
 
-            p {
-                line-height: 0.9;
+            h3 {
+                font-size: 16px;
+                font-weight: 600;
                 padding-bottom: 6px;
+                letter-spacing: 1px;
+            }
 
-                &:first-of-type {
-                    font-size: 16px;
-                    font-weight: 600;
-                    letter-spacing: 1px;
-                }
-
-                &:not(first-of-type) {
-                    font-size: 14px;
-                    font-style: italic;
-                    letter-spacing: 0.1px;
-                }
+            p {
+                padding-bottom: 6px;
+                font-size: 14px;
+                letter-spacing: 0.1px;
             }
         }
 
         &__social {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             width: 290px;
 
             @include screen(940) {
@@ -126,6 +176,8 @@
             }
             
             ul {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
 
                 li {
@@ -135,15 +187,21 @@
         }
 
         &__credits {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: flex-end;
+            -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                    justify-content: flex-end;
             width: 290px;
             font-size: 14px;
             font-style: italic;
             padding-top: 10px;
 
             @include screen(940) {
-                justify-content: center;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
             }
 
             img {
